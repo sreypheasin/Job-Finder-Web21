@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 export default function JobCard({
@@ -21,6 +20,7 @@ export default function JobCard({
 
         <img
           src={
+            thumbnail ||
             "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
           }
           alt={title}
@@ -37,7 +37,7 @@ export default function JobCard({
           </p>
 
           <p className="mt-2 text-pretty text-rose-700 font-bold">
-            {salary || "No Job Description"}
+            {salary || "No Job Description"} $
           </p>
           <span className="text-center mt-4 block rounded-md border border-indigo-900 bg-indigo-900 px-5 py-3 text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-indigo-900">
             Apply
